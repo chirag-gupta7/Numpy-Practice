@@ -4,6 +4,25 @@ import numpy as np
 # Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
 weekly_steps = np.array([8543, 10287, 6432, 9876, 12045, 15623, 7890])
 
+# By default, these math operations apply to the array as though it were a list of numbers. 
+# However, by specifying the axis parameter, we can apply an operation along the specified axis of an array:
+#
+# temperatures = np.array([[50, 51, 54, 59, 59, 53, 54, 51],
+#                          [45, 50, 38, 44, 40, 46, 43, 39]])
+#
+# np.sum(temperatures, axis=0)   # Sum of each column
+# np.min(temperatures, axis=1)   # Min of each row
+#
+# axis=0: each column (vertical direction, down the rows)
+# axis=1: each row (horizontal direction, across the columns)
+#
+# Visual representation:
+#                    axis 1 →
+#           col-0  col-1  col-2  col-3
+#   axis 0  row-0   [  ]   [  ]   [  ]   [  ]
+#     ↓     row-1   [  ]   [  ]   [  ]   [  ]
+#           row-2   [  ]   [  ]   [  ]   [  ]
+
 print("Weekly Steps Analysis:")
 print("=" * 30)
 print("Daily steps:", weekly_steps)
